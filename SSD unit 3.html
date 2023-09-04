@@ -145,13 +145,17 @@
                         <p>Or using “pylint --help-msg=missing-module-docstring” will tell us: </p>
                         <pre><code>
                           pylint --help-msg=missing-module-docstring
-:missing-module-docstring (C0114): *Missing module docstring*
-  Used when a module has no docstring.Empty modules do not require a docstring.
-  This message belongs to the basic checker.
+			:missing-module-docstring (C0114): *Missing module docstring*
+			  Used when a module has no docstring.Empty modules do not require a docstring.
+			  This message belongs to the basic checker.
                         </code></pre>
 
                         <p>So this error is telling us that we are missing a docstring at the beginning of the code. If we did add a docstring (e.g. “““This script is telling us…”””) to the code and run the file again, it says: </p>
-                        <b>Your code has been rated at 2.50/10 (previous run: 0.00/10, +2.50) </b>
+                        
+			<pre><code>
+			Your code has been rated at 2.50/10 (previous run: 0.00/10, +2.50)
+			</code></pre>
+
 
                         <p>So now, we have eliminated that error and the score of the code has gone up! </p>
 
