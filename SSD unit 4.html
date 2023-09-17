@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Secure Software Development</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>My E-Portfolio</strong> <span>by Fergus Nugent</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">About Me</a></li>
+							<li><a href="generic.html">Introduction to Computer Science</a></li>
+							<li><a href="elements.html">Object Oriented Programming</a></li>
+							<li><a href="SSD.html">Secure Software Development</a></li>
+						</ul>
+						<ul class="actions stacked">
+
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Secure Software Development Unit 4</h1>
+									</header>
+
+									<!-- Content -->
+                  
+                      <div>
+                        <h2 id="content">Programming Language Concepts </h2>
+                        <p> <b>1.	What is ReDOS and what part do ‘Evil Regex’ play? </b></p>
+                        <p>According to Weidman (n.d.), a Regular expression Denial of Service (ReDoS) is a type of cybersecurity attack (more specifically, a Denial of Service attack). This attack exploits Regular Expression implementations that are inefficient or poorly designed which causes them to work very slowly or become unresponsive. “Evil Regex” patterns play a crucial role in the context of ReDoS attacks. Weigman (n.d.) states that ‘A Regex pattern is called Evil Regex if it can get stuck on crafted input’. These patterns are specially generated input strings that are designed to ‘expose common errors made by programmers’ in order to evaluate the performance of regular expressions and to observe and rectify potential security vulnerabilities (Larson and Kirk, 2016). </p>
+                        <p><b>2.	What are the common problems associated with the use of regex? How can these be mitigated? </b></p>
+                        <p>One common problem associated with the use of regex is that its nuance can make it prone to errors and bugs. For example, as noted by Larson (2018), while a failure will arise with unbalanced parentheses, it will not with unbalanced braces []. Furthermore, some symbols have distinct meanings based on their situation. This makes it difficult for developers to understand the rules and can be easy for them to make mistakes during development. An additional problem, mentioned above, is that poorly designed regular expressions can be inefficient and slow, particularly when applied to large input texts. Another problem relates to issue of false positives and negatives. Regular expression patterns may inadvertently match or fail to match certain inputs, leading to false positives (matching when it shouldn’t – i.e. accepting strings that should be rejected) or false negatives (not matching when it should – i.e. rejecting strings that are acceptable). These mistakes can cause a program to operate incorrectly or potentially crash (Larson, 2018). To mitigate the problems outlined here, it is important to use regular expressions in the right situation and where they are most suitable for the task at hand. Furthermore, developers should follow best practices when using regular expressions, including writing clear and efficient patterns, testing them thoroughly, and documenting them appropriately. </p>
+                        <p><b>3.	How and why could regex be used as part of a security solution? </b></p>
+                        <p>Regular expressions (regex) can be used as part of a security solution in various ways to improve the security of software systems and applications. One way is that regex can help in defining authentication mechanisms. For example, they can be used to match and validate user credentials or identify access permissions based on patterns in usernames or roles. Regex can also be used to validate user input (such as email addresses, phone numbers, etc.) by confirming whether the data entered by users complies with the expected formats. By doing this, they help prevent security vulnerabilities such as injection attacks. </p>
+
+                        
+                        <h2 id="content">References</h2>
+                        <p>Control Logic. (n.d.) What are the advantages and disadvantages of using regular expressions for control logic? Available from: https://www.linkedin.com/advice/0/what-advantages-disadvantages-using-regular-expressions#:~:text=Another%20disadvantage%20of%20regex%20is,%2C%20structured%2C%20or%20hierarchical%20data. [Accessed 3rd September 2023]. </p>
+                        <p>Larson, E. & Kirk, A. (2016) Generating evil test strings for regular expressions. IEEE International Conference on Software Testing, Verification and Validation (ICST), pp. 309-319. </p>
+                        <p>Larson, E. (2018) Automatic checking of regular expressions. 18th IEEE International Working Conference on Source Code Analysis and Manipulation (SCAM), pp. 225-234. </p>
+                        <p>Weidman, A. (n.d.) Regular expressions Denial of Service – ReDoS. Available from: https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS [Accessed 3rd September 2023]. </p>
+                      
+
+                        <h2 id="content">Seminar activity: </h2>
+                        <p><u>Python Tower of Hanoi code: </u></p>
+                        
+											 
+                        <h2 id="content">References</h2>
+                        <p>Jain, D. (2022) Python Program for Tower of Hanoi. Available from: https://www.geeksforgeeks.org/python-program-for-tower-of-hanoi/ [Accessed 31 August 2023] </p>
+                        <p>Malukani, A. (2021) Tower of Hanoi in Python: Complete Step-by-Step. Available from: https://www.askpython.com/python/examples/tower-of-hanoi-in-python [Accessed 31 August 2023] </p>
+
+
+                        <p><b>Create a python program that implements a regex that complies with the rules provided – test it against the examples provided. </b></p>
+                        <p>Below is a screenshot of a python program that implements a regex for a correct (true) UK postcode: </p>
+
+                        <p>This program tests against the first example provided (M1 1AA). In the program, I define a function called Postcode which takes in an input as a parameter – this represents the postcode you want to validate. I have included a bool function as it will make it clearer if the UK postcode inputted is valid or not by outputting True (if the postcode is a real UK postcode) or False (if the postcode is not real). The regex function “re.match” checks whether the user input (i.e. attempted postcode) matches the regex pattern provided (i.e. the rules that a string must follow in order for it to be classed as a valid postcode). </p>
+
+                        <p>Below is a screenshot of a python program that implements a regex for a wrong (false) UK postcode: </p>
+
+
+                        <h2 id="content">References</h2>
+                        <p>Jaiswal, S. (2020) Python Regular Expression Tutorial. Available from: https://www.datacamp.com/tutorial/python-regular-expression-tutorial [Accessed 3rd September 2023] </p>
+                        <p>Kurdi, D. (2020) The UK Postcode Format. Available from: https://ideal-postcodes.co.uk/guides/uk-postcode-format [Accessed 3rd September 2023] </p>
+                        
+      
+											</div>
+
+								</div>
+							</section>
+
+					</div>
+
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
