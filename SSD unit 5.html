@@ -53,7 +53,7 @@
 										<h2 id="content">Codio – Equivalence testing in Python:</h2>
 									<p>Run styleLint.py.</p>
 									<pre><code>
-									def factorial(n):
+def factorial(n):
 """ Return factorial of n """
 if n == 0:
 return 1
@@ -109,7 +109,7 @@ print encoded
 									</code></pre>
 									<p>The error reads: </p>
 									<pre><code>
-										File "pylintTest.py", line 26
+File "pylintTest.py", line 26
     print encoded
                 ^
 SyntaxError: Missing parentheses in call to 'print'. Did you mean print(encoded)?
@@ -120,7 +120,7 @@ SyntaxError: Missing parentheses in call to 'print'. Did you mean print(encoded)
 									<p>Firstly, correct the error above by writing what the error suggests – change to print(encoded).</p>
 									<p>Then a further error comes up: </p>
 									<pre><code>
-										Traceback (most recent call last):
+Traceback (most recent call last):
   File "pylintTest2.py", line 7, in <module>
     choice = raw_input("would you like to encode or decode?")
 NameError: name 'raw_input' is not defined
@@ -134,7 +134,7 @@ word = input("Please enter text")
 									<p>Now, the code runs successfully without errors in the output. </p>
 									<p>Here is the correctly written code: </p>
 									<pre><code>
-										import string
+import string
  
 shift = 3
 choice = input("would you like to encode or decode?")
@@ -161,7 +161,7 @@ print(encoded)
 									</code></pre>
 									<p>Run mccabe on sums.py. What is the result? </p>
 									<pre><code>
-										def test_sum():
+def test_sum():
     assert sum([1, 2, 3]) == 6, "Should be 6"
 
 if __name__ == "__main__":
@@ -170,11 +170,11 @@ if __name__ == "__main__":
 									</code></pre>
 									<p>The output reads: </p>
 									<pre><code>
-										Everything passed
+Everything passed
 									</code></pre>
 									<p>Run mccabe on sums2.py. What is the result? </p>
 									<pre><code>
-										def test_sum():
+def test_sum():
     assert sum([1, 2, 3]) == 6, "Should be 6"
 
 def test_sum_tuple():
@@ -187,7 +187,7 @@ if __name__ == "__main__":
 									</code></pre>
 									<p>The output reads: </p>
 									<pre><code>
-										Traceback (most recent call last):
+Traceback (most recent call last):
   File "sums2.py", line 12, in <module>
     test_sum_tuple()
   File "sums2.py", line 8, in test_sum_tuple
@@ -196,11 +196,11 @@ AssertionError: Should be 6
 									</code></pre>
 									<p>When I change assert sum((1, 2, 2)) == 6 to assert sum((1, 2, 2)) == 5, the output reads: </p>
 									<pre><code>
-										Everything passed
+Everything passed
 									</code></pre>
 									<p>Run equivalence.py.</p>
 									<pre><code>
-										def equivalence_partition(iterable, relation):
+def equivalence_partition(iterable, relation):
     """Partitions a set of objects into equivalence classes
 
     Args:
@@ -274,10 +274,10 @@ def test_equivalence_partition():
 if __name__ == '__main__':
     test_equivalence_partition()
 									</code></pre>
-									<p>This test partitions integers [-3,5] into equivalence classes based on lambda x, y: (x-y)%4 == 0. </p>
+									<p>This test partitions integers [-3,5] into equivalence classes based on lambda x, y: (x-y) % 4 == 0. </p>
 									<p>The output reads: </p>
 									<pre><code>
-										{1, -3}
+{1, -3}
 {2, -2}
 {3, -1}
 {0, 4}
@@ -292,7 +292,7 @@ if __name__ == '__main__':
 									</code></pre>
 									<p>If I were to change the integers to (2, 6), the output would read: </p>
 									<pre><code>
-										{2}
+{2}
 {3}
 {4}
 {5}
@@ -303,7 +303,7 @@ if __name__ == '__main__':
 									</code></pre>
 									<p>If I were to change the integers to (-7, -1), the output would read: </p>
 									<pre><code>
-										{1, -3}
+{1, -3}
 {2, -2}
 {3, -1}
 {0, 4}
