@@ -1,1 +1,361 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Secure Software Development</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>My E-Portfolio</strong> <span>by Fergus Nugent</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">About Me</a></li>
+							<li><a href="generic.html">Introduction to Computer Science</a></li>
+							<li><a href="elements.html">Object Oriented Programming</a></li>
+							<li><a href="SSD.html">Secure Software Development</a></li>
+						</ul>
+						<ul class="actions stacked">
+
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Collaboration Discussion Activity Part 1</h1>
+									</header>
+
+									<!-- Content -->
+										<h2 id="content">Reflection</h2>
+<p>I feel that the design document is coming along very successfully. In terms of my individual contributions, I have worked on creating UML diagrams to help represent the online retail system and the activities/behaviours occurring within it. I have also looked at the relevant literature on the topic and have added that to parts of the document. For this week, as well, I am looking to refine document (looking for any spelling mistakes and rectifying them, making sure that the document is looking organised and professional etc.). I have also completed the peer review document and have added comments on what I feel most appropriately reflect the effort in this project among myself and my peers.</p>                  
+                      
+                        
+								
+									<!-- Content -->
+						<h2 id="content">Codio – Equivalence testing in Python:</h2>
+										<p>Run styleLint.py.</p>
+										<pre><code>
+def factorial(n):
+""" Return factorial of n """
+if n == 0:
+return 1
+else:
+return n*factorial(n-1)
+						                        </code></pre>
+									<p>The output reads: </p>
+									<pre><code>
+File "styleLint.py", line 5
+""" Return factorial of n """
+		^
+IndentationError: expected an indented block
+										
+									</code></pre>
+									<p>There have been a few amendments to this code in order for the errors to cease: </p>
+									<pre><code>
+def factorial(n):
+  """ Return factorial of n """
+
+  if n == 0:
+    return 1
+  else:
+    return n*factorial(n-1)
+
+										
+									</code></pre>
+									<p>It is important that the docstring (triple quotes) are also indented. </p>
+									<p>Run pylint on pylintTest.py </p>
+									<pre><code>
+import string
+ 
+shift = 3
+choice = raw_input("would you like to encode or decode?")
+word = (raw_input("Please enter text"))
+letters = string.ascii_letters + string.punctuation + string.digits
+encoded = ''
+if choice == "encode":
+  for letter in word:
+    if letter == ' ':
+      encoded = encoded + ' '
+    else:
+      x = letters.index(letter) + shift
+      encoded=encoded + letters[x]
+    if choice == "decode":
+      for letter in word:
+        if letter == ' ':
+            encoded = encoded + ' '
+        else:
+          x = letters.index(letter) - shift
+          encoded = encoded + letters[x]
+
+print encoded
+									</code></pre>
+									<p>The error reads: </p>
+									<pre><code>
+File "pylintTest.py", line 26
+    print encoded
+                ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(encoded)?
+
+										
+									</code></pre>
+									<p>Correcting the errors:</p>
+									<p>Firstly, correct the error above by writing what the error suggests – change to print(encoded).</p>
+									<p>Then a further error comes up: </p>
+									<pre><code>
+Traceback (most recent call last):
+  File "pylintTest2.py", line 7, in <module>
+    choice = raw_input("would you like to encode or decode?")
+NameError: name 'raw_input' is not defined
+									</code></pre>
+									<p>This error is mitigated when changing the function raw_input to simple input(): </p>
+									<pre><code>
+choice = input("would you like to encode or decode?")
+word = input("Please enter text")
+										
+									</code></pre>
+									<p>Now, the code runs successfully without errors in the output. </p>
+									<p>Here is the correctly written code: </p>
+									<pre><code>
+import string
+ 
+shift = 3
+choice = input("would you like to encode or decode?")
+word = input("Please enter text")
+letters = string.ascii_letters + string.punctuation + string.digits
+encoded = ''
+if choice == "encode":
+  for letter in word:
+    if letter == ' ':
+      encoded = encoded + ' '
+    else:
+      x = letters.index(letter) + shift
+      encoded=encoded + letters[x]
+    if choice == "decode":
+      for letter in word:
+        if letter == ' ':
+            encoded = encoded + ' '
+        else:
+          x = letters.index(letter) - shift
+          encoded = encoded + letters[x]
+
+print(encoded)
+
+									</code></pre>
+									<p>Run mccabe on sums.py. What is the result? </p>
+									<pre><code>
+def test_sum():
+    assert sum([1, 2, 3]) == 6, "Should be 6"
+
+if __name__ == "__main__":
+    test_sum()
+    print("Everything passed")
+									</code></pre>
+									<p>The output reads: </p>
+									<pre><code>
+Everything passed
+									</code></pre>
+									<p>Run mccabe on sums2.py. What is the result? </p>
+									<pre><code>
+def test_sum():
+    assert sum([1, 2, 3]) == 6, "Should be 6"
+
+def test_sum_tuple():
+    assert sum((1, 2, 2)) == 6, "Should be 6"
+
+if __name__ == "__main__":
+    test_sum()
+    test_sum_tuple()
+    print("Everything passed")
+									</code></pre>
+									<p>The output reads: </p>
+									<pre><code>
+Traceback (most recent call last):
+  File "sums2.py", line 12, in <module>
+    test_sum_tuple()
+  File "sums2.py", line 8, in test_sum_tuple
+    assert sum((1, 2, 2)) == 6, "Should be 6"
+AssertionError: Should be 6
+									</code></pre>
+									<p>When I change assert sum((1, 2, 2)) == 6 to assert sum((1, 2, 2)) == 5, the output reads: </p>
+									<pre><code>
+Everything passed
+									</code></pre>
+									<p>Run equivalence.py.</p>
+									<pre><code>
+def equivalence_partition(iterable, relation):
+    """Partitions a set of objects into equivalence classes
+
+    Args:
+        iterable: collection of objects to be partitioned
+        relation: equivalence relation. I.e. relation(o1,o2) evaluates to True
+            if and only if o1 and o2 are equivalent
+
+    Returns: classes, partitions
+        classes: A sequence of sets. Each one is an equivalence class
+        partitions: A dictionary mapping objects to equivalence classes
+    """
+    classes = []
+    partitions = {}
+    for o in iterable:  # for each object
+        # find the class it is in
+        found = False
+        for c in classes:
+            if relation(next(iter(c)), o):  # is it equivalent to this class?
+                c.add(o)
+                partitions[o] = c
+                found = True
+                break
+        if not found:  # it is in a new class
+            classes.append(set([o]))
+            partitions[o] = classes[-1]
+    return classes, partitions
+
+def equivalence_enumeration(iterable, relation):
+    """Partitions a set of objects into equivalence classes
+
+    Same as equivalence_partition() but also numbers the classes.
+
+    Args:
+        iterable: collection of objects to be partitioned
+        relation: equivalence relation. I.e. relation(o1,o2) evaluates to True
+            if and only if o1 and o2 are equivalent
+
+    Returns: classes, partitions, ids
+        classes: A sequence of sets. Each one is an equivalence class
+        partitions: A dictionary mapping objects to equivalence classes
+        ids: A dictionary mapping objects to the indices of their equivalence classes
+    """
+    classes, partitions = equivalence_partition(iterable, relation)
+    ids = {}
+    for i, c in enumerate(classes):
+        for o in c:
+            ids[o] = i
+    return classes, partitions, ids
+
+def check_equivalence_partition(classes, partitions, relation):
+    """Checks that a partition is consistent under the relationship"""
+    for o, c in partitions.items():
+        for _c in classes:
+            assert (o in _c) ^ (not _c is c)
+    for c1 in classes:
+        for o1 in c1:
+            for c2 in classes:
+                for o2 in c2:
+                    assert (c1 is c2) ^ (not relation(o1, o2))
+
+def test_equivalence_partition():
+    relation = lambda x, y: (x - y) % 4 == 0
+    classes, partitions = equivalence_partition(
+        range(-3, 5),
+        relation
+    )
+    check_equivalence_partition(classes, partitions, relation)
+    for c in classes: print(c)
+    for o, c in partitions.items(): print(o, ':', c)
+
+if __name__ == '__main__':
+    test_equivalence_partition()
+									</code></pre>
+									<p>This test partitions integers [-3,5] into equivalence classes based on lambda x, y: (x-y) % 4 == 0. </p>
+									<p>The output reads: </p>
+									<pre><code>
+{1, -3}
+{2, -2}
+{3, -1}
+{0, 4}
+-3 : {1, -3}
+-2 : {2, -2}
+-1 : {3, -1}
+0 : {0, 4}
+1 : {1, -3}
+2 : {2, -2}
+3 : {3, -1}
+4 : {0, 4}
+									</code></pre>
+									<p>If I were to change the integers to (2, 6), the output would read: </p>
+									<pre><code>
+{2}
+{3}
+{4}
+{5}
+2 : {2}
+3 : {3}
+4 : {4}
+5 : {5}
+									</code></pre>
+									<p>If I were to change the integers to (-7, -1), the output would read: </p>
+									<pre><code>
+{1, -3}
+{2, -2}
+{3, -1}
+{0, 4}
+-3 : {1, -3}
+-2 : {2, -2}
+-1 : {3, -1}
+0 : {0, 4}
+1 : {1, -3}
+2 : {2, -2}
+3 : {3, -1}
+4 : {0, 4}
+									</code></pre>
+                        
+											</div>
+
+								</div>
+							</section>
+
+					</div>
+
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
 
