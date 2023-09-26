@@ -49,74 +49,51 @@
 										<h1>Teamwork Contributions</h1>
 									</header>
 
-									<!-- Content -->
-										<h2 id="content">Reflection</h2>
-<p>I feel that the design document is coming along very successfully. In terms of my individual contributions, I have worked on creating UML diagrams to help represent the online retail system and the activities/behaviours occurring within it. I have also looked at the relevant literature on the topic and have added that to parts of the document. For this week, as well, I am looking to refine document (looking for any spelling mistakes and rectifying them, making sure that the document is looking organised and professional etc.). I have also completed the peer review document and have added comments on what I feel most appropriately reflect the effort in this project among myself and my peers.</p>                  
-                      
-                        
-								
-									<!-- Content -->
-						<h2 id="content">Codio – Equivalence testing in Python:</h2>
-										<p>Run styleLint.py.</p>
-										<pre><code>
-def factorial(n):
-""" Return factorial of n """
-if n == 0:
-return 1
-else:
-return n*factorial(n-1)
-						                        </code></pre>
-									<p>The output reads: </p>
-									<pre><code>
-File "styleLint.py", line 5
-""" Return factorial of n """
-		^
-IndentationError: expected an indented block
+<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="images/pic01.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="Collab1.html" class="link">Collaborative Discussion Activity 1</a></h3>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic02.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="Collab2.html" class="link">Collaborative Discussion Activity 2</a></h3>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic03.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="Assignment1.html" class="link">Assignment Part 1</a></h3>
 										
-									</code></pre>
-									<p>There have been a few amendments to this code in order for the errors to cease: </p>
-									<pre><code>
-def factorial(n):
-  """ Return factorial of n """
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic04.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="Assignment2.html" class="link">Assignment Part 2</a></h3>
+									</header>
+								</article>
+							</section>
 
-  if n == 0:
-    return 1
-  else:
-    return n*factorial(n-1)
+						
 
-										
-									</code></pre>
-									<p>It is important that the docstring (triple quotes) are also indented. </p>
-									<p>Run pylint on pylintTest.py </p>
-									<pre><code>
-import string
- 
-shift = 3
-choice = raw_input("would you like to encode or decode?")
-word = (raw_input("Please enter text"))
-letters = string.ascii_letters + string.punctuation + string.digits
-encoded = ''
-if choice == "encode":
-  for letter in word:
-    if letter == ' ':
-      encoded = encoded + ' '
-    else:
-      x = letters.index(letter) + shift
-      encoded=encoded + letters[x]
-    if choice == "decode":
-      for letter in word:
-        if letter == ' ':
-            encoded = encoded + ' '
-        else:
-          x = letters.index(letter) - shift
-          encoded = encoded + letters[x]
-
-print encoded
-							
-
-																			</code></pre>
+					</div>
                         
-											</div>
+										
 
 								</div>
 							</section>
