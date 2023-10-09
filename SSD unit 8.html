@@ -51,121 +51,69 @@
 
 									<!-- Content -->
 										<h2 id="content">Reflection</h2>
-                    <p>This week, my colleagues and I caught up about the assignment on Microsoft Teams and discussed what we had accomplished so far and what areas we could focus on for the following week. We have now got a first template up and are constantly adding content to the document. Furthermore, we have begun addressing the coding aspects of the assignment and have started to write some code on the GitHub repository, which will also be constantly updated.</p>					
-											
-                  
-                      <div>
-                        <h2 id="content">Team activity - What is a Secure Programming Language:</h2>
-                        <p> <b>What factors determine whether a programming language is secure or not? </b></p>
-                        <p>According to Cifuentes and Bierman (2019), the 3 most common software vulnerabilities they found from the National Vulnerability Database (NVD) data were buffer errors (including buffer overloads), injection errors (including cross-site scripting (XSS), SQL injection, code injection), and information leak errors (including information leaked through log files, debugging, test code). According to them, a truly secure programming language is ‘one that has first-class support for all three categories’. In other words, a secure programming language is one that has no cases of buffer errors, injection errors and/or information leak errors. Therefore, these categories are suggested to be the factors determining whether a programming language is secure or not.</p>
-                        <p>While Pillai (2017) suggests that these three factors contribute to determining whether a programming language is secure, he also notes other factors that play a role, including: cryptography issues, authentication issues, and race conditions.</p>
+										<p>This week we had another group meeting regarding the ongoing assignment which requires us to produce code in response to our design document in part 1. While I thought the meeting was very productive and respectful, I somewhat still feel a bit unsure about exactly how we are going to approach the coding aspect of this assignment – I still don’t fully understand what our plan is and what we are trying to achieve. So, I will aim to clarify this confusion with my colleagues in the coming days, which will hopefully make it easier to move forward with this project. </p>
+									<p>Regarding the unit content, I feel that a collaborative discussion, like we had in the early stages of the module, is a very useful way to share ideas with others and produce feedback of content. I felt that the first collaborative discussion increased my understanding of the topic of the discussion and to think about things in a different light/perspective, which I hope this discussion will also do.</p>
 
-                        <p><b>Could Python be classed as a secure language?</b></p>
-                        <p>Cifuentes and Bierman (2019) argue that Python cannot be classed as a secure language due to the implication that it does not hold to what they define as a secure language (i.e., it is vulnerable to buffer errors, injection errors and information leak errors).</p>
-                        <p>Pillai (2017) argues that the classification of Python as a secure language ‘depends on the application code and the dependent module code used, and how they are able to deal with or mask the…errors.’ For example, using the input value in Python 2.x can expose sensitive data in the code, including the passwords of some users in the system. Pillai notes that ‘even if there were no sensitive data in the program, a hacker using this approach can reveal valuable information about the program such as variable names, function names, packages used, and so on.’ Yet, this can be fixed by replacing the input value with “raw_input”, however, the developers still need to perform proper type conversion to maintain security levels.</p>
-                        <p>Pillai also importantly notes that many security vulnerabilities that occur/occurred in the older (but still widely used) Python 2.x versions have been fixed in the more recent versions (3.x) of Python, so this is important to keep in mind when evaluating the nature of Python as a secure language.</p>
+<div>
+<h2 id="content">Seminar 4 preparation:</h2>
+<p><b>Read the Cryptography with Python blog at tutorialspoint.com (link is in the reading list). Select one of the methods described/ examples given and create a python program that can take a short piece of text and encrypt it.</b></p>
+<p><u>The code is shown in the image below:</u></p>
+				<html>
+				      <body>
+				<img src="C:\Users\Fergus Nugent\Desktop\computer science\module 3 software security\unit 8 seminar - cypher image 1.png" alt="unit 8 Cipher">
+				      </body>
+			      </html>
+	<p><u>The output now shows the initial message in reverse order:</u></p>
+				<html>
+				<body>
+				<img src="C:\Users\Fergus Nugent\Desktop\computer science\module 3 software security\unit 8 seminar - cipher 2.png" alt="unit 8 Cipher output 1">
+				</body>
+			      </html>
+					<p><b>Answer the following questions in your e-portfolio:</b></p>	
+<li> Why did you select the algorithm you chose? </li>
+	<p>I chose the reverse cipher technique where each character in the plaintext is reversed/swapped with its corresponding character from the end of the alphabet or character set.</p>
+	<li> Would it meet the GDPR regulations? Justify your answer.</li>
+	<p>No, this technique would not meet the GDPR regulations. This is because the reverse cipher technique is very weak whereby a hacker can easily decrypt the cipher to get to the original message – all they have to do is use the same algorithm and put the encrypted text in the message variable:</p>
+				<html>
+				<body>
+				<img src="C:\Users\Fergus Nugent\Desktop\computer science\module 3 software security\unit 8 seminar - cipher 3.png" alt="unit 8 Cipher 2">
+				</body>
+			      </html>
+<p>Which will produce the output:</p>
+				<html>
+				<body>
+				<img src="C:\Users\Fergus Nugent\Desktop\computer science\module 3 software security\unit 8 seminar - cipher 4.png" alt="unit 8 Cipher Output 2">
+				</body>
+			      </html>
 
-                        <p><b>Would Python be a better language to create operating systems than C? Why/why not?</b></p>
-                        <p>Python would not be a better language since it is a high-level and interpreted language. C, on the other hand, is a low-level language, which makes it significantly easier to create an operating system with.</p>
+	<p><u>References:</u></p>
+	<p>Data Protection Act 2018. (2018). Available from: https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted [Accessed 26 Sep 2023].</p>
+	<p>TutorialPoint. (2020) Cryptography with Python Tutorial. Available from: https://www.tutorialspoint.com/cryptography_with_python/index.htm [Accessed 26 Sep 2023].</p>
 
-                        
-                        <h2 id="content">References</h2>
-                        <p>Cifuentes, C. and Bierman, G. (2019) What is a secure programming language?. In 3rd Summit on Advances in Programming Languages (SNAPL 2019). Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik, pp. 3-15.</p>
-                        <p>Pillai, A.B. (2017) Software Architecture with Python. Birmingham, UK. Packt Publishing Ltd.</p>
-                      
+	<p><u>Collaborative Discussion 2:</u></p>
+	<li> The (anonymous) TrueCrypt authors have said “Using TrueCrypt is not secure as it may contain unfixed security issues” (TrueCrypt, 2014). Does the cryptanalysis provided above prove or disprove this assumption?</li>
+	<li> Would you be prepared to recommend TrueCrypt to a friend as a secure storage environment? What caveats (if any) would you add?</li>
+	<li> Present an ontology design which captures the weaknesses of TrueCrypt, and organise them according to their severity. Expand the ontology design by considering the factors which will cause each weakness to become an issue from a user's perspective. For example, if a user wishes to encrypt a disk storing bank details using TrueCrypt, which weakness of the software might cause this specific user goal to be negatively impacted? </li>
 
-                        <h2 id="content">Codio activity: </h2>
-                        <p><u>Buffer Overflow in C: </u></p>
-                        <p>In the Buffer Overflow in C file in Codio, the code in the Overflow.c file reads: </p>
-                        
-											  <pre><code>#include <stdio.h> 
-                        int main(int argc, char **argv)
-                        {
-                        char buf[8]; // buffer for eight characters
-                        printf("enter name:"); 
-                        gets(buf); // read from stdio (sensitive function!)
-                        printf("%s\n", buf); // print out data stored in buf
-                        return 0; // 0 as return value
-                        {
-                        </code></pre>
+	<p>The cryptanalysis report provided by Junestam and Guigo (2014) does support the assumption by the authors of TrueCrypt that “[u]sing TrueCrypt is not secure as it may contain unfixed security issues” (TrueCrypt, 2014). The findings of the report reveal four cryptography vulnerabilities in TrueCrypt, indicating that TrueCrypt lacks a fundamental sense of security. Furthermore, the report highlights these issues as potentially leading to unpredictable results, whereby it is stated that “CryptAcquireContext may silently fail in unusual scenarios” as well as “AES implementation [being] susceptible to cache-timing attacks” (Junestam and Guigo, 2014; p, 12), where both of these are marked as high in severity levels. Thus, the findings support the assumption by the authors of TrueCrypt that the application “may contain unfixed security issues”. On the other hand, as noted by cryptography specialist Matt Green, who commented on the report, “[t]he NCC audit found no evidence of deliberate backdoors, or any severe design flaws that will make the software insecure in most instances.” (Green, 2015). This is also important to bear in mind as the findings did not explicitly declare TrueCrypt as being insecure piece of software. However, the undoubtable thing is that TrueCrypt is no longer maintained and has not been since 2014. This means that if a security vulnerability is found, there will not be anybody to report it to, which means that it will not ever be fixed. Thus, while it may be deemed as a secure system now, there is an ever-growing risk that it may become insecure sometime in the future.</p>
+	<p>In relation to the question of whether I would recommend TrueCrypt as a secure storage environment, I would again point to what I wrote above about the lack of maintainability of TrueCrypt by the developers, which would inevitably lead it to becoming more at risk of security vulnerabilities over time. Furthermore, as the nature of TrueCrypt is that it is inherently linked to the encryption of data from storage devices, I would be hesitant to ultimately be prepared recommend it to others.</p>
+	
+<p><b>Present an ontology design which captures the weaknesses of TrueCrypt, and organise them according to their severity. Expand the ontology design by considering the factors which will cause each weakness to become an issue from a user's perspective. For example, if a user wishes to encrypt a disk storing bank details using TrueCrypt, which weakness of the software might cause this specific user goal to be negatively impacted?</b></p>
+				<html>
+				<body>
+				<img src="C:\Users\Fergus Nugent\Desktop\computer science\module 3 software security\collab discussion 2 - ontology diagram.png" alt="Collaboration Discussion 2 - Ontology diagram">
+				</body>
+			      </html>
 
-                        <p>When I enter my name to test it, my name is repeated back to me.</p>
-                        <p>When I enter a string of 10 or more characters, the output reads: </p>
-                        <pre><code>
-                        *** stack smashing detected ***: <unknown> terminated
-                        Aborted (core dumped)
-                        </code></pre>
-
-                        <p><u>Buffer Overflow in Python: </u></p>
-                        <p>In the Buffer Overflow in Python file in Codio, the code in the Overflow.py file reads: </p>
-                        <pre><code>
-                        buffer=[None]*10
-                        for i in range (0,11):
-                            buffer[i]=7
-                        print(buffer)
-
-                        </code></pre>
-
-                        <p>When I run the file it reads: </p>
-                        <pre><code>
-                        Traceback (most recent call last):
-                          File "Overflow.py", line 3, in <module>
-                            buffer[i]=7
-                        IndexError: list assignment index out of range
-                        </code></pre>
-
-                        <p>When I install pylint (i.e. writing in the command “pip3 install pylint”) and run the same file, it reads: </p>
-                        <pre><code>
-                        ************* Module Overflow
-                        Overflow.py:4:0: C0303: Trailing whitespace (trailing-whitespace)
-                        Overflow.py:5:0: C0304: Final newline missing (missing-final-newline)
-                        Overflow.py:1:0: C0103: Module name "Overflow" doesn't conform to snake_case naming style (invalid-name)
-                        Overflow.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-                        
-                        -----------------------------------
-                        Your code has been rated at 0.00/10
-                        </code></pre>
-
-                        <p><u>Explanation: </u></p>
-                        <p>The first sentence (Overflow.py:4:0: C0303) basically means that line 4 at column 0 violates the convention C0303.</p>
-                        <p>The second sentence (Overflow.py:5:0: C0304) basically means that line 5 at column 0 violates the convention C0304.</p>
-                        <p>The fourth sentence (Overflow.py:1:0: C0114) basically means that line 1 at column 0 violates the convention C0114.</p>
-
-                        <p>Also, the information showing the message of the error is important (e.g. “missing-final-newline”)</p>
-                        <p>We can use the help message on the command line (e.g. pylint --help-msg=missing-final-newline) and this will tell us what the error is: </p>
-
-                        <pre><code>
-                        pylint --help-msg=trailing-whitespace
-                        :trailing-whitespace (C0303): *Trailing whitespace*
-                          Used when there is whitespace between the end of a line and the newline. 
-                        This message belongs to the format checker.
-
-                        </code></pre>
-
-                        <p>Or using “pylint --help-msg=missing-module-docstring” will tell us: </p>
-                        <pre><code>
-                          pylint --help-msg=missing-module-docstring
-			:missing-module-docstring (C0114): *Missing module docstring*
-			  Used when a module has no docstring.Empty modules do not require a docstring.
-			  This message belongs to the basic checker.
-                        </code></pre>
-
-                        <p>So this error is telling us that we are missing a docstring at the beginning of the code. If we did add a docstring (e.g. “““This script is telling us…”””) to the code and run the file again, it says: </p>
-                        
-			<pre><code>
-			Your code has been rated at 2.50/10 (previous run: 0.00/10, +2.50)
-			</code></pre>
+	<p><u>References:</u></p>
+	<p>Green, M. (2015) Truecrypt report. Available from: https://blog.cryptographyengineering.com/2015/04/02/truecrypt-report/ [Accessed 30 Sep 2023]</p>
+	<p>Junestam, A. & Guido, N. (2014) Open Crypto Audit Project TrueCrypt: Cryptographic Review. Available from: https://opencryptoaudit.org/reports/TrueCrypt_Phase_II_NCC_OCAP_final.pdf [Accessed 30 Sep 2023].</p>
 
 
-                        <p>So now, we have eliminated that error and the score of the code has gone up! </p>
-
-                        <h2 id="content">References</h2>
-                        <p>Pylint 3.0.0a8-dev0 documentation (2023). Available from: https://pylint.pycqa.org/en/latest/tutorial.html [Accessed 23 August 2023] </p>
-                        <p>Shephard, N. (2022) Linting – What is all the fluff about? Available from: https://rse.shef.ac.uk/blog/2022-04-19-linting/ [Accessed 23 August 2023] </p>
-                        
-
-                        
-											</div>
+	
+	
+</div>
+										</div>
 
 								</div>
 							</section>
