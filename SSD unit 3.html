@@ -162,6 +162,44 @@
 			<p><b><u>References</u></b></p>
                         <p>Pylint 3.0.0a8-dev0 documentation (2023). Available from: https://pylint.pycqa.org/en/latest/tutorial.html [Accessed 23 August 2023] </p>
                         <p>Shephard, N. (2022) Linting – What is all the fluff about? Available from: https://rse.shef.ac.uk/blog/2022-04-19-linting/ [Accessed 23 August 2023] </p>
+
+			      <p><u>Codio: Producer-Consumer Mechanism Codio Activity:</u></p>
+			      <p><b>Run producer-consumer.py in the provided Codio workspace (Producer-Consumer Mechanism) where the queue data structure is used.</b></p>
+			      <p><b>A copy of the code is available here for you.</b></p>
+			      <p><b># code source: https://techmonger.github.io/55/producer-consumer-python/</b></p>
+
+			      <pre><code>
+				from threading import Thread
+				from queue import Queue
+				 
+				q = Queue()
+				final_results = []
+				 
+				def producer():
+				    for i in range(100):
+				        q.put(i)
+				        
+				 
+				def consumer():
+				    while True:
+				        number = q.get()
+				        result = (number, number**2)
+				        final_results.append(result)
+				        q.task_done()
+				   
+				   
+				for i in range(5):
+				    t = Thread(target=consumer)
+				    t.daemon = True
+				    t.start()
+				    
+				producer()
+				 
+				q.join()
+				 
+				print (final_results)
+
+			      </code></pre>
                         
 
                         
