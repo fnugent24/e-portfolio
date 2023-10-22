@@ -52,7 +52,7 @@
 									<!-- Content -->
 										<h2 id="content">Collaborative Discussion 2:</h2>
 									<b><li>The (anonymous) TrueCrypt authors have said “Using TrueCrypt is not secure as it may contain unfixed security issues” (TrueCrypt, 2014). Does the cryptanalysis provided above prove or disprove this assumption?</b></li>
-									<b><li>Would you be prepared to recommend TrueCrypt to a friend as a secure storage environment? What caveats (if any) would you add?</b></li><
+									<b><li>Would you be prepared to recommend TrueCrypt to a friend as a secure storage environment? What caveats (if any) would you add?</b></li>
 									<b><li>Present an ontology design which captures the weaknesses of TrueCrypt, and organise them according to their severity. Expand the ontology design by considering the factors which will cause each weakness to become an issue from a user's perspective. For example, if a user wishes to encrypt a disk storing bank details using TrueCrypt, which weakness of the software might cause this specific user goal to be negatively impacted?</b></li>
 
 										<p>The cryptanalysis report provided by Junestam and Guigo (2014) does support the assumption by the authors of TrueCrypt that “[u]sing TrueCrypt is not secure as it may contain unfixed security issues” (TrueCrypt, 2014). The findings of the report reveal four cryptography vulnerabilities in TrueCrypt, indicating that TrueCrypt lacks a fundamental sense of security. Furthermore, the report highlights these issues as potentially leading to unpredictable results, whereby it is stated that “CryptAcquireContext may silently fail in unusual scenarios” as well as “AES implementation [being] susceptible to cache-timing attacks” (Junestam and Guigo, 2014; p, 12), where both of these are marked as high in severity levels. Thus, the findings support the assumption by the authors of TrueCrypt that the application “may contain unfixed security issues”. On the other hand, as noted by cryptography specialist Matt Green, who commented on the report, “[t]he NCC audit found no evidence of deliberate backdoors, or any severe design flaws that will make the software insecure in most instances.” (Green, 2015). This is also important to bear in mind as the findings did not explicitly declare TrueCrypt as being insecure piece of software. However, the undoubtable thing is that TrueCrypt is no longer maintained and has not been since 2014. This means that if a security vulnerability is found, there will not be anybody to report it to, which means that it will not ever be fixed. Thus, while it may be deemed as a secure system now, there is an ever-growing risk that it may become insecure sometime in the future.</p>
@@ -61,7 +61,7 @@
 										<p><b>Ontology Design:</b></p>
 										<img src="C:\Users\Fergus Nugent\Desktop\computer science\module 3 software security\collab discussion 2 - ontology diagram.png" alt="collab ontology design">
 
-										<p><b>References:</b></p>
+										<p><b><u>References:</u></b></p>
 										<p>Green, M. (2015) Truecrypt report. Available from: https://blog.cryptographyengineering.com/2015/04/02/truecrypt-report/ [Accessed 30 Sep 2023]</p>
 										<p>Junestam, A. & Guido, N. (2014) Open Crypto Audit Project TrueCrypt: Cryptographic Review. Available from: https://opencryptoaudit.org/reports/TrueCrypt_Phase_II_NCC_OCAP_final.pdf [Accessed 30 Sep 2023].</p>
 
