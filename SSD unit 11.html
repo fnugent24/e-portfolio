@@ -51,118 +51,14 @@
 
 									<!-- Content -->
 										<h2 id="content">Reflection</h2>
-                    <p>This week, my colleagues and I caught up about the assignment on Microsoft Teams and discussed what we had accomplished so far and what areas we could focus on for the following week. We have now got a first template up and are constantly adding content to the document. Furthermore, we have begun addressing the coding aspects of the assignment and have started to write some code on the GitHub repository, which will also be constantly updated.</p>					
-											
-                  
-                      <div>
-                        <h2 id="content">Team activity - What is a Secure Programming Language:</h2>
-                        <p> <b>What factors determine whether a programming language is secure or not? </b></p>
-                        <p>According to Cifuentes and Bierman (2019), the 3 most common software vulnerabilities they found from the National Vulnerability Database (NVD) data were buffer errors (including buffer overloads), injection errors (including cross-site scripting (XSS), SQL injection, code injection), and information leak errors (including information leaked through log files, debugging, test code). According to them, a truly secure programming language is ‘one that has first-class support for all three categories’. In other words, a secure programming language is one that has no cases of buffer errors, injection errors and/or information leak errors. Therefore, these categories are suggested to be the factors determining whether a programming language is secure or not.</p>
-                        <p>While Pillai (2017) suggests that these three factors contribute to determining whether a programming language is secure, he also notes other factors that play a role, including: cryptography issues, authentication issues, and race conditions.</p>
+									<p>This week we had another couple of meetings for our group project. We are starting to wrap all the code up and begin the testing process. I was tasked with linting the code on Visual Studio Code using Pylint and flake8 as well as testing the application’s functional requirements. We also worked on completing the documentation as well as the read-me file. We are discussing this week about presenting a pre-demonstration in order to get some (hopefully) valuable feedback and to make some slight changes before submitting the assignment and presenting the final demonstration.</p>
+									<p><b>Debate: Microservices and Microkernels</b></p>
+									<p><b>Read Appendix A: the Tanenbaum-Torvalds debate in DiBona & Ockman (1999) then read Fritzsch et al (2019).</b></p>
+									<p><b>The forum has a message that says: “Torvalds has been proven wrong and it only took nearly thirty years. Microservices and microkernels are the future."</b></p>
+									<p><b><li>On the forum post a message either agreeing or disagreeing with the above and give a justification (ideally with an academic reference) supporting your view.</li></b></p>
+									<p><b><li>Outside the forum, discuss your positions in your team and come up with a team stance. This should be shared in Unit 12.</li></b></p>
 
-                        <p><b>Could Python be classed as a secure language?</b></p>
-                        <p>Cifuentes and Bierman (2019) argue that Python cannot be classed as a secure language due to the implication that it does not hold to what they define as a secure language (i.e., it is vulnerable to buffer errors, injection errors and information leak errors).</p>
-                        <p>Pillai (2017) argues that the classification of Python as a secure language ‘depends on the application code and the dependent module code used, and how they are able to deal with or mask the…errors.’ For example, using the input value in Python 2.x can expose sensitive data in the code, including the passwords of some users in the system. Pillai notes that ‘even if there were no sensitive data in the program, a hacker using this approach can reveal valuable information about the program such as variable names, function names, packages used, and so on.’ Yet, this can be fixed by replacing the input value with “raw_input”, however, the developers still need to perform proper type conversion to maintain security levels.</p>
-                        <p>Pillai also importantly notes that many security vulnerabilities that occur/occurred in the older (but still widely used) Python 2.x versions have been fixed in the more recent versions (3.x) of Python, so this is important to keep in mind when evaluating the nature of Python as a secure language.</p>
-
-                        <p><b>Would Python be a better language to create operating systems than C? Why/why not?</b></p>
-                        <p>Python would not be a better language since it is a high-level and interpreted language. C, on the other hand, is a low-level language, which makes it significantly easier to create an operating system with.</p>
-
-                        
-                        <h2 id="content">References</h2>
-                        <p>Cifuentes, C. and Bierman, G. (2019) What is a secure programming language?. In 3rd Summit on Advances in Programming Languages (SNAPL 2019). Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik, pp. 3-15.</p>
-                        <p>Pillai, A.B. (2017) Software Architecture with Python. Birmingham, UK. Packt Publishing Ltd.</p>
-                      
-
-                        <h2 id="content">Codio activity: </h2>
-                        <p><u>Buffer Overflow in C: </u></p>
-                        <p>In the Buffer Overflow in C file in Codio, the code in the Overflow.c file reads: </p>
-                        
-											  <pre><code>#include <stdio.h> 
-                        int main(int argc, char **argv)
-                        {
-                        char buf[8]; // buffer for eight characters
-                        printf("enter name:"); 
-                        gets(buf); // read from stdio (sensitive function!)
-                        printf("%s\n", buf); // print out data stored in buf
-                        return 0; // 0 as return value
-                        {
-                        </code></pre>
-
-                        <p>When I enter my name to test it, my name is repeated back to me.</p>
-                        <p>When I enter a string of 10 or more characters, the output reads: </p>
-                        <pre><code>
-                        *** stack smashing detected ***: <unknown> terminated
-                        Aborted (core dumped)
-                        </code></pre>
-
-                        <p><u>Buffer Overflow in Python: </u></p>
-                        <p>In the Buffer Overflow in Python file in Codio, the code in the Overflow.py file reads: </p>
-                        <pre><code>
-                        buffer=[None]*10
-                        for i in range (0,11):
-                            buffer[i]=7
-                        print(buffer)
-
-                        </code></pre>
-
-                        <p>When I run the file it reads: </p>
-                        <pre><code>
-                        Traceback (most recent call last):
-                          File "Overflow.py", line 3, in <module>
-                            buffer[i]=7
-                        IndexError: list assignment index out of range
-                        </code></pre>
-
-                        <p>When I install pylint (i.e. writing in the command “pip3 install pylint”) and run the same file, it reads: </p>
-                        <pre><code>
-                        ************* Module Overflow
-                        Overflow.py:4:0: C0303: Trailing whitespace (trailing-whitespace)
-                        Overflow.py:5:0: C0304: Final newline missing (missing-final-newline)
-                        Overflow.py:1:0: C0103: Module name "Overflow" doesn't conform to snake_case naming style (invalid-name)
-                        Overflow.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-                        
-                        -----------------------------------
-                        Your code has been rated at 0.00/10
-                        </code></pre>
-
-                        <p><u>Explanation: </u></p>
-                        <p>The first sentence (Overflow.py:4:0: C0303) basically means that line 4 at column 0 violates the convention C0303.</p>
-                        <p>The second sentence (Overflow.py:5:0: C0304) basically means that line 5 at column 0 violates the convention C0304.</p>
-                        <p>The fourth sentence (Overflow.py:1:0: C0114) basically means that line 1 at column 0 violates the convention C0114.</p>
-
-                        <p>Also, the information showing the message of the error is important (e.g. “missing-final-newline”)</p>
-                        <p>We can use the help message on the command line (e.g. pylint --help-msg=missing-final-newline) and this will tell us what the error is: </p>
-
-                        <pre><code>
-                        pylint --help-msg=trailing-whitespace
-                        :trailing-whitespace (C0303): *Trailing whitespace*
-                          Used when there is whitespace between the end of a line and the newline. 
-                        This message belongs to the format checker.
-
-                        </code></pre>
-
-                        <p>Or using “pylint --help-msg=missing-module-docstring” will tell us: </p>
-                        <pre><code>
-                          pylint --help-msg=missing-module-docstring
-			:missing-module-docstring (C0114): *Missing module docstring*
-			  Used when a module has no docstring.Empty modules do not require a docstring.
-			  This message belongs to the basic checker.
-                        </code></pre>
-
-                        <p>So this error is telling us that we are missing a docstring at the beginning of the code. If we did add a docstring (e.g. “““This script is telling us…”””) to the code and run the file again, it says: </p>
-                        
-			<pre><code>
-			Your code has been rated at 2.50/10 (previous run: 0.00/10, +2.50)
-			</code></pre>
-
-
-                        <p>So now, we have eliminated that error and the score of the code has gone up! </p>
-
-                        <h2 id="content">References</h2>
-                        <p>Pylint 3.0.0a8-dev0 documentation (2023). Available from: https://pylint.pycqa.org/en/latest/tutorial.html [Accessed 23 August 2023] </p>
-                        <p>Shephard, N. (2022) Linting – What is all the fluff about? Available from: https://rse.shef.ac.uk/blog/2022-04-19-linting/ [Accessed 23 August 2023] </p>
-                        
+									
 
                         
 											</div>
