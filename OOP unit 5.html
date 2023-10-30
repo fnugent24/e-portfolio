@@ -50,46 +50,55 @@
 									</header>
 
 									<!-- Content -->
-										<h2 id="content">Reflection</h2>
-										<p>I look forward to completing this module, particularly as there is a strong focus on the Python language. I am also hoping to get some experience with working on Java as that will be helpful to my development in software engineering.
+										<h2 id="content">Lecturecast notes:</h2>
+									<p>A class diagram is a diagram showing all the classes and the relationships between them.</p>
+									<p>There are several kinds of relationships between classes:</p>
+									<ul>
+										<li>Objects in one class may contain references to objects in another class. For example, in poker, each Deck contains references to many Cards. Or a tv remote contains references to many types of buttons. This kind of relationship is called HAS-A, as in, “a Deck has a Card”.</li>
+										<li>A further relationship includes one class that inherits from another class. For example, a Hand inherits from a Deck. This kind of relationship is called IS-A, as in, “a Hand is a kind of a Deck”.</li>
+									</ul>
+									<p>The following class diagram shows the relationships between Card, Deck and Hand:</p>
+									<img width="491" alt="image" src="https://github.com/fnugent24/fnugent24.github.io/assets/119634822/c944845a-50a3-426a-8ff0-cca1b59f6f57">
+									<p><b><u>Codio Inheritance notes:</u></b></p>
+									<p>Inheritance is the ability to define a new class that is a modified version of an existing class. Inheritance is a useful feature (and core feature) of object-oriented programming. It can promote the reusability of code since the behaviour of the parent class(es) can be customised (i.e. creating child classes) without having to essentially modify them. On the other hand, inheritance can make programming hard to read. When a method is called, it can be unclear where to find its definition. It can also make debugging difficult because when invoking a method on an object, it may be hard to figure out which method will be invoked.</p>
+									<p><b><u>e-portfolio activities:</u></b></p>
+									<p>Write a Python program with polymorphism that is usable within the summative assessment for the driverless car:</p>
+									<pre><code>
+										class Driver:
+        def __init__(self, name):
+            self.name = name
 
-While I am getting more to grips with the basics of Python, there are already a few things that I am not entirely comfortable with, and would like to improve my understanding upon. These include using For loops, classes, Lambda, and recursion. I think with loops (particularly with for loops), the issue is trying to get my head around being able to acknowledge what the computer is able to “understand” and the step-by-step approach that the computer undergoes.</p>
-										<div class="row">
-											<div>
-<h2 id="content">Further Reading</h2>
-<p>One thing I have learnt from the reading (Joque, 2016) is the argument surrounding the nature of a programming “language” – whether it is merely a way of providing instructions to a computer which it compiles literally and unambiguously through a strict set of rules, or whether it is more complex than that and is more akin to human languages which contain ambiguities, and can be creative, metaphoric etc. It seems to me that the creation and development of object-oriented languages (such as Python) have been able to demonstrate that programming languages can be creative and more akin to “real” languages.</p>
-<p>The article by Di Silvestro & Nadir (2021) provides an interesting insight on the 'emerging and increasingly successful use of ePortfolios'. Perhaps, for me, one aspect of the article that I found particularly insightful was the fact that there was an element of a "journey" involved in the making of the portfolio; but not simply a way to see one's improvements in, for example, their levels of knowledge increasing in a particular field or their improvements in their writing skills, but also on a deeper, more profound level where they could see the development of their "pathway through life" opening up - as one student puts it: 'As I read through old postings, essays, and projects, a clear picture of a person in search of something, and trying to find her way emerged.</p>
+        def set_destination(self):
+          destination = input("destination set by driver: ")
 
+      class Passenger:
+        def __init__(self, name):
+          self.name = name
 
-												<!-- Preformatted Code -->
-													<h3>Unit 1 Activities:</h3>
-													<pre><code>Develop a Python program and apply protected and unprotected variables within it:
+        def set_destination(self):
+          destination = input("destination set by passenger: ")
 
-    class Shape:
-      def __init__(self, length, width):
-        self._length = length
-        self.width = width
+      driver = Driver("Sam")
+      passenger = Passenger("Patty")
 
-    obj = Shape(50, 10)
-    print(obj._length)
-    print(obj.width)
+      print(driver.name)
+      print(passenger.name)
 
-Note: protected/"private" variables are denoted by putting an underscore before the object name (e.g. self._length = length) while 
-the conventional way of unprotected/"public" variables are to omit using an underscore (e.g. self.width = width).
+      for person in (driver, passenger):
+        person.set_destination()
 
-</code></pre>
+									</code></pre>
+									<p>This will output:</p>
+									<p>Sam</p>
+									<p>Patty</p>
+									<p>destination set by driver: 123 street</p>
+									<p>destination set by driver: 123 street</p>
+									<p><b><u>References</u></b></p>
+									<p>Akerblom, B. & Wrigstad, T. (2015) Measuring polymorphism in Python programs. In Proceedings of the 11th Symposium on Dynamic Languages (DLS 2015). New York, NY: USA. pp. 114-128. DOI: 10.1145/2816707.2816717</p>
+									<p>Lambert, K. A. & Osborne, M. (2010) 'Software Development, Data Types, and Expressions' in: Fundamentals of Python: From First Programs through Data Structures. Boston, Massachusetts: USA.</p>
 
 											</div>
 
-
-
-											<h2 id="content">References</h2>
-
-<p>Di Silvestro, F. & Nadir, H. (2021) The Power of ePortfolio Development to Foster Reflective and Deeper Learning in an Online Graduate Adult Education Program. Adult Learning, 32(4), pp.154-164.</p>
-
-<p>Joque, J. (2016) The Invention Of The Object: Object Orientation and the Philosophical Development of Programming Languages. Philosophy & Technology, 29, pp.335-356.</p>
-
-<p>Seth, A., Aggarwal, H. & Singla, A.R. (2011) Evolution of Technology through Procedural, Object Oriented, and Component Based to Service Oriented. *Journal for Computing Teachers.</p>
 
 																						</div>
 										</div>
