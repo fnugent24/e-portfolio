@@ -1,1 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Introduction to Computer Science</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>My E-Portfolio</strong> <span>by Fergus Nugent</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">About Me</a></li>
+							<li><a href="generic.html">Introduction to Computer Science</a></li>
+							<li><a href="elements.html">Object Oriented Programming</a></li>
+							<li><a href="SSD.html">Secure Software Development</a></li>
+						</ul>
+						<ul class="actions stacked">
+
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Intro to Computer Science Units 10 and 11</h1>
+									</header>
+
+									<!-- Content -->
+										<h2 id="content">Reflection:</h2>
+                  <p>There are several ways that you can define your database and represent your dataset.</p>
+                  <p>Databases are now a core element for the success of big enterprises. Data-driven activities, like, trend analysis, predictive and statistical analysis, enable organisations to take strategic decisions. </p>
+                  <p>However, the database architectural design and implementation of a database must follow a framework in order to accommodate organisational needs.</p>
+                  <p>Open-source databases are becoming a popular selection for the database community. The advantages of open source databases are that they are free and source code is available to customise the database according to your own need.</p>
+                  <p>A Database Management System (DBMS) is a software system designed to manage collections of data that are large, shared, and persistent. The use of a DBMS provides facilities for efficient and effective querying, data security and integrity, and simultaneous accessing of data.</p>
+                  <p>Persistent data, such as financial records, refers to data that contains core information, is unlikely to change and is stored on a hard drive or disk. Some amendments/updates may be needed but the information stored is relatively permanent, unlike transient data which is discarded at the end of a session.</p>
+                  <p>A database model is a conceptual view of a database. It is a combination of constructs used to organise data.</p>
+                  <p>The most widespread data model is the relational data model. This represents a database in the form of relations; a 2-D table with rows and columns of data – the columns represent attributes which have a distinct name and are always referenced by their name, never by their position. A database may contain one or more such tables. A relation schema is used to describe a relation.</p>
+                  <p>A schema is a description of the structure of an entire database. It is used to maintain the database.</p>
+                  <p>Every relation (2-D table) in a database should have a Primary key – they are used to identify individual records and improves the functionality and reliability of our database tables. A primary key corresponds to value(s) in specified column(s) which must be unique for each row in a table and not be NULL. </p>
+                  <p>A Foreign key corresponds to value(s) in specified column(s) which must reference an existing record in another table (via it’s primary key or some other unique constraint). The Foreign Key acts as a common attribute (column) to relate information stored in different tables. The Foreign key can contain a NULL value, but we avoid this by replacing it with a flag. </p>
+                  <p>A constraint defines certain properties that data in a database must comply with. </p>
+                  <p>When inserting a new value into a table, we need to make sure that the database constraints are not violated:</p>
+                  <ul>
+                    <li>The value of the attribute (column) should be of the correct data type.</li>
+                    <li>The Primary key attribute must (column) not be null.</li>
+                    <li>The key value(s) must not be the same as that of an existing tuple (row) in the same relation.</li>
+                    <li>The value of a foreign key, if any, must refer to an existing tuple (row) in the corresponding relation (table).</li>
+                  </ul>
+                  <p>The process of normalisation is applied in order to ensure that the data is “good”, that is, structured in a logical and robust format.</p>
+                  <p>Normalisation refers to dividing the columns of a relation/table into two or more tables, duplicating those columns necessary to maintain relationships.</p>
+                  <p>For a database to be successfully normalised, the decomposition of the table has to be “lossless” (i.e. it should not lose any information whilst going through the decomposition). In other words, all the stages of normalisation should be verified and resolved.</p>
+                  <p>Decomposition of a table goes through a set of normalisation processes (i.e. 1st, 2nd and 3rd or even Boyce-Codd Normal Form). The first stage in the normalisation process is to convert a table of un-normalised data into a table in first normal form. This means that we must extract the repeating groups of data that may appear in some rows of the table and replace them with rows/tuples where each column has only one value associated with it.</p>
+                  <p>A relation is in third normal form if there are no indirect, or transitive, dependencies between the attributes/columns. For a relation to be in third normal form, all rows must be directly dependent on the primary key.</p>
+                  <p>SQL (pronounced “SEQUEL”) is a special-purpose programming language designed for manipulating data in a relational database management system.</p>
+                  <p>A SQL statement is a set of instructions that are chained together in order for the program to understand and run a request.</p>
+                  <p>SQL statements often begin with a keyword (e.g. SELECT, SHOW, USE) and are followed by clauses (e.g. the FROM clause).</p>
+                  <p>Example of statements to get to specific info:</p>
+                  <ul>
+                    <li>- SHOW DATABASES;</li>
+                    <li>- USE people;</li>
+                    <li>- SHOW TABLES;</li>
+                    <li>- SELECT * FROM names;</li>
+                    <li>- WHERE surname = ‘Nugent’,</li>
+                    <li>- ORDER BY id;</li>
+                  </ul>
+                  <p>SHOW DATABASES; - means display the available databases for the user (broadest step)</p>
+                  <p>USE people; – means switch to a specific database (i.e. people database).</p>
+                  <p>SHOW TABLES; - means display the available tables for the user</p>
+                  <p>SELECT * FROM names; - means that we are selecting/requesting the data from all the table columns in the specified table (e.g. names table). </p>
+                  <p>The Asterix notation (*) in place of column names, indicates that all the attributes of the relation(s) specified in the FROM clause are to be retrieved!</p>
+                  <p>The WHERE clause specifies which value should be updated (i.e. where the surname column equals ‘Nugent’).</p>
+                  <p>The ORDER BY clause can be used to order rows in the query result. The order can either be ascending by using the key word ASC or descending by using the key word DESC. If no key word is specified, the default order is ascending.</p>
+                  <p>Conclusion - the result of this example query is a “relation” (or table) containing the data of the people/person with the surname ‘Nugent’.</p>
+                  <p>(Note: If the WHERE was omitted, all of the values would become updated).</p>
+                  <p>Aggregate Functions are built-in functions which can operate on the values of a single column of a permanent table or the resulting (new) table of a query.</p>
+                  <p>E.g. COUNT(*) returns the number of rows in the resulting table.</p>
+                  <p>COUNT – counts the number of values in a specified column </p>
+                  <p>SUM – totals the values in a specified column with a numeric type</p>
+                  <p>AVG – calculates the average of the values in a specified column with a numeric type.</p>
+                  <p>MIN – returns the minimum value in a specified column</p>
+                  <p>MAX – returns the maximum value in a specified column</p>
+                  <p>In SQL, there are 4 main data modifying keywords:</p>
+                  <ul>
+                    <li>SELECT for getting data from the specified table.</li>
+                    <li>INSERT for inserting data into the specified table.</li>
+                    <li>UPDATE for updating existing data in the specified table.</li>
+                    <li>DELETE for deleting data from the specified table.</li>
+                  </ul>
+                  <p>These 4 concepts are often recognised with the CRUD acronym:</p>
+                  <ul>
+                    <li>- Create - equivalent to the INSERT keyword</li>
+                    <li>- Read - equivalent to the SELECT keyword</li>
+                    <li>- Update - same</li>
+                    <li>- Delete - same</li>
+                  </ul>
+                  <p>How to insert values: - Use the INSERT command (which represents the CREATE  keyword in “CRUD”)</p>
+                  <p>An example:</p>
+                  <ul>
+                    <li>- USE harry_potter_characters;</li>
+                    <li>- INSERT INTO catalog (name, muggle_or_wizard, house),</li>
+                    <li>- Values (“Ron Weasley”, “Wizard”, “Gryffindor”);</li>
+                  </ul>
+                  <p>To UPDATE a value/column within a table, we would write (in the terminal):</p>
+                  <ul>
+                    <li>- UPDATE harry_potter_characters</li>
+                    <li>- SET muggle_or_wizard = “Muggle”, </li>
+                    <li>- house = “NA”</li>
+                    <li>- WHERE id = 4;</li>
+                  </ul>
+                  <p>DELETE example:</p>
+                  <ul>
+                    <li>- DELETE FROM catalog</li>
+                    <li>- WHERE id = 8;</li>
+                  </ul>
+                  <p><b>(Note: The DELETE command operates on only one table at a time. Also, If the condition specified in the WHERE clause is FALSE, no tuple is deleted. Otherwise, if the condition is TRUE, one or more rows may be removed. Finally, if no condition is specified, (i.e. there is no WHERE clause), all rows in the table are removed - even if all rows of a table are deleted, the table still exists in the database. The DROP TABLE command may be used to remove a table completely from the database.)</b></p>
+                  <p>Nested queries: A database query may consist of a number of sub-queries. When the result of a sub-query forms the condition, or part of the condition, of another query, such a complex query is called a nested query. A special operator called IN is used to examine whether a row is a member of the resulting relation of a subquery.</p>
+                  <p>To prevent simultaneous access problems and to maintain database integrity DBMS applies a Locking approach.</p>
+                  <ul>
+                    <li>-	A Shared lock means when implemented, the data can only be read and not modified. </li>
+                    <li>-	An Exclusive lock means when implemented, the data can only be altered or modified by the transaction that imposed the lock.</li>
+                  </ul>
+
+                  
+																						</div>
+										</div>
+
+								</div>
+							</section>
+
+					</div>
+
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 
